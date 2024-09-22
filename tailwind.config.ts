@@ -7,7 +7,15 @@ export default {
 		"./public/**/*.{js,ts,html}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				donate: "#B4F461",
+				"donate-alter": "#7ec126",
+				"donate-bg": "#F9F7F3",
+				"donate-primary": "#111111",
+				"donate-secondary": "#111111B3",
+			},
+		},
 	},
 	plugins: [],
 } as Config;

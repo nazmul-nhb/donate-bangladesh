@@ -6,8 +6,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Donate Bangladesh - DOM for Fun</title>
 	</head>
-	<body class="">
-		<nav class="animate-bounce">Navbar</nav>
+	<body class="max-w-screen-2xl px-6 mx-auto bg-donate-bg">
+		<header class="pb-8">
+			<!-- Navbar -->
+			<nav
+				class="flex gap-5 justify-between items-center font-semibold text-xl text-donate-primary py-4"
+			>
+				<!-- Blog Button -->
+				<button
+					class="bg-donate border border-donate px-8 py-3 rounded-lg hover:bg-donate-alter transition-all duration-500"
+				>
+					Blog
+				</button>
+				<!-- Site Logo & Title -->
+				<div class="flex items-center gap-2">
+					<!-- Logo -->
+					<img
+						class="w-6 aspect-auto"
+						src="./src/assets/logo.png"
+						alt="Donate Bangladesh Logo"
+					/>
+					<!-- Site Title -->
+					<span class="">Donate Bangladesh</span>
+				</div>
+				<!-- Initial Balance -->
+				<div class="flex items-center gap-2 text-donate-secondary">
+					<img src="./src/assets/coin.png" alt="Currency Coin" />
+					<span id="balance"></span>
+					<span>BDT</span>
+				</div>
+			</nav>
+		</header>
+
 		<main class=""></main>
 		<footer class=""></footer>
 		<script type="module" src="/src/main.ts"></script>
