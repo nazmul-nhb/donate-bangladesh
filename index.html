@@ -9,11 +9,22 @@
 	<body class="max-w-screen-2xl px-6 mx-auto bg-donate-bg">
 		<!-- Header Section -->
 		<header
-			class="pb-8 mx-10 md:mx-28 flex flex-col items-center justify-center"
+			class="pb-8 mx-4 md:mx-28 flex flex-col items-center justify-center"
 		>
+    	<!-- Site Logo & Title -->
+				<div class="flex md:hidden justify-start items-center gap-2 ">
+					<!-- Logo -->
+					<img
+						class="w-6 aspect-auto"
+						src="./src/assets/logo.png"
+						alt="Donate Bangladesh Logo"
+					/>
+					<!-- Site Title -->
+					<span class="text-2xl font-bold">Donate Bangladesh</span>
+				</div>
 			<!-- Navbar -->
 			<nav
-				class="w-full flex gap-5 mb-14 justify-between items-center font-semibold text-xl text-donate-primary py-4"
+				class="w-full flex gap-5 mb-14 justify-between items-center md:font-semibold md:text-xl text-donate-primary py-4"
 			>
 				<!-- Blog Button -->
 				<button
@@ -22,7 +33,7 @@
 					Blog
 				</button>
 				<!-- Site Logo & Title -->
-				<div class="flex items-center gap-2">
+				<div class="hidden md:flex items-center gap-2 ">
 					<!-- Logo -->
 					<img
 						class="w-6 aspect-auto"
@@ -58,20 +69,23 @@
 		</header>
 
 		<!-- Main Contents -->
-		<main class="mx-16 md:mx-36">
+		<main class="mx-6 md:mx-36">
 			<!-- Donate Tab -->
-			<section id="donate-tab" class="block">
+			<section id="donate-tab" class="block space-y-24">
 				<!-- Donate Noakhali Flood -->
-				<div class="flex gap-8">
-          <!-- Image -->
+				<div class="flex md:flex-row flex-col gap-4 md:gap-8">
+					<!-- Image -->
 					<figure class="flex-1">
 						<img
+							class="p-3"
 							src="./src/assets/noakhali.png"
 							alt="Noakhali Flood"
 						/>
 					</figure>
-          <!-- Description -->
-					<div class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4">
+					<!-- Description -->
+					<div
+						class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4"
+					>
 						<div
 							class="flex items-center gap-2 text-donate-secondary"
 						>
@@ -105,7 +119,123 @@
 							/>
 							<button
 								type="submit"
-								class="bg-donate border border-donate px-8 py-3 rounded-lg hover:bg-donate-alter transition-all duration-500"
+								class="bg-donate border border-donate px-8 py-3 rounded-lg hover:bg-donate-alter transition-all duration-500 text-xl font-semibold"
+							>
+								Donate Now
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- Donate Feni Flood -->
+				<div class="lex md:flex-row flex-col gap-4 md:gap-8">
+					<!-- Image -->
+					<figure class="flex-1">
+						<img
+							class="p-3"
+							src="./src/assets/feni.png"
+							alt="Feni Flood"
+						/>
+					</figure>
+					<!-- Description -->
+					<div
+						class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4"
+					>
+						<div
+							class="flex items-center gap-2 text-donate-secondary"
+						>
+							<img
+								src="./src/assets/coin.png"
+								alt="Currency Coin"
+							/>
+							<span id="feni-amount">0</span>
+							<span>BDT</span>
+						</div>
+						<h3 class="font-bold text-xl text-donate-secondary">
+							Donate for Flood Relief in Feni, Bangladesh
+						</h3>
+						<p class="indent-4">
+							The recent floods in Feni have devastated local
+							communities, leading to severe disruption and loss.
+							Your generous donation will help provide immediate
+							aid, including food, clean water, and medical
+							supplies, to those affected by this calamity.
+							Together, we can offer crucial support and help
+							rebuild lives in the aftermath of this disaster.
+							Every contribution counts towards making a real
+							difference. Please consider donating today to assist
+							those in urgent need.
+						</p>
+						<form class="flex flex-col gap-4">
+							<input
+								class="border border-[#1111111A] h-12 focus:outline-none px-3 rounded-lg"
+								placeholder="Write Donation Amount"
+								required
+								type="number"
+								name="feni-input"
+								id="feni-input"
+							/>
+							<button
+								type="submit"
+								class="bg-donate border border-donate px-8 py-3 rounded-lg hover:bg-donate-alter transition-all duration-500 text-xl font-semibold"
+							>
+								Donate Now
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- Donate Quota Movement Injured -->
+				<div class="lex md:flex-row flex-col gap-4 md:gap-8">
+					<!-- Image -->
+					<figure class="flex-1">
+						<img
+							class="p-3"
+							src="./src/assets/quota-protest.png"
+							alt="Quota Movement"
+						/>
+					</figure>
+					<!-- Description -->
+					<div
+						class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4"
+					>
+						<div
+							class="flex items-center gap-2 text-donate-secondary"
+						>
+							<img
+								src="./src/assets/coin.png"
+								alt="Currency Coin"
+							/>
+							<span id="quota-amount">0</span>
+							<span>BDT</span>
+						</div>
+						<h3 class="font-bold text-xl text-donate-secondary">
+							Aid for Injured in the Quota Movement
+						</h3>
+						<p class="indent-4">
+							The recent Quota movement has resulted in numerous
+							injuries and significant hardship for many
+							individuals. Your support is crucial in providing
+							medical assistance, rehabilitation, and necessary
+							supplies to those affected. By contributing, you
+							help ensure that injured individuals receive the
+							care and support they need during this challenging
+							time. Every donation plays a vital role in
+							alleviating their suffering and aiding in their
+							recovery. Please consider making a donation to
+							support these brave individuals in their time of
+							need.
+						</p>
+						<form class="flex flex-col gap-4">
+							<input
+								class="border border-[#1111111A] h-12 focus:outline-none px-3 rounded-lg"
+								placeholder="Write Donation Amount"
+								required
+								type="number"
+								name="quota-input"
+								id="quota-input"
+							/>
+							<button
+								type="submit"
+								class="bg-donate border border-donate px-8 py-3 rounded-lg hover:bg-donate-alter transition-all duration-500 text-xl font-semibold"
 							>
 								Donate Now
 							</button>
