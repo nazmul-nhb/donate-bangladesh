@@ -1,10 +1,17 @@
-import { balanceContainer } from "../main";
-import { getElementByID } from "./getElements";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import { balanceContainer } from "../main";
+import { getElementByID } from "./getElements";
+import { IDonationInfo } from "../types/interfaces";
+import { saveDonationData } from "./localStorage";
 
-export const calculateDonation = (containerID: string, inputID: string) => {
+export const calculateDonation = (
+	containerID: string,
+	inputID: string,
+	titleID: string
+) => {
 	const donationContainer = getElementByID(containerID);
+	const title = getElementByID(titleID)?.innerText;
 	const amount = Number((getElementByID(inputID) as HTMLInputElement).value);
 
 	let currentBalance = Number(balanceContainer?.innerText);
@@ -31,6 +38,16 @@ export const calculateDonation = (containerID: string, inputID: string) => {
 			donationContainer.innerText = noakhaliNumberAmount.toString();
 		}
 		(getElementByID(inputID) as HTMLInputElement).value = "";
+
+		const donationInfo: IDonationInfo = {
+			type: containerID,
+			amount,
+			title: title as string,
+			time: new Date(),
+		};
+
+		saveDonationData(donationInfo);
+
 		toastr.success(`Donated BDT ${amount}`);
 	}
 };

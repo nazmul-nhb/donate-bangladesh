@@ -41,21 +41,21 @@ historyButton?.addEventListener("click", handleHistoryClick);
 // Handle Donations
 const handleNoakhaliDonation = (e: MouseEvent) => {
 	e.preventDefault();
-	calculateDonation("noakhali-amount", "noakhali-input");
+	calculateDonation("noakhali-amount", "noakhali-input", "noakhali-title");
 };
 
 noakhaliButton?.addEventListener("click", handleNoakhaliDonation);
 
 const handleFeniDonation = (e: MouseEvent) => {
 	e.preventDefault();
-	calculateDonation("feni-amount", "feni-input");
+	calculateDonation("feni-amount", "feni-input", "feni-title");
 };
 
 feniButton?.addEventListener("click", handleFeniDonation);
 
 const handleQuotaDonation = (e: MouseEvent) => {
 	e.preventDefault();
-	calculateDonation("quota-amount", "quota-input");
+	calculateDonation("quota-amount", "quota-input", "quota-title");
 };
 
 quotaButton?.addEventListener("click", handleQuotaDonation);
