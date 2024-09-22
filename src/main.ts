@@ -8,10 +8,10 @@ const historyButton = getElementByID("history-btn");
 const donateTab = getElementByID("donate-tab");
 const historyTab = getElementByID("history-tab");
 
-let initialBalance = 100000;
+let currentBalance = 100000;
 
 if (balanceContainer) {
-	balanceContainer.innerText = initialBalance.toString();
+	balanceContainer.innerText = currentBalance.toString();
 }
 
 const handleDonationClick = (e: MouseEvent) => {

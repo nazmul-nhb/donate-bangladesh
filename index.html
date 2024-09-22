@@ -8,7 +8,9 @@
 	</head>
 	<body class="max-w-screen-2xl px-6 mx-auto bg-donate-bg">
 		<!-- Header Section -->
-		<header class="pb-8 flex flex-col items-center justify-center">
+		<header
+			class="pb-8 mx-10 md:mx-28 flex flex-col items-center justify-center"
+		>
 			<!-- Navbar -->
 			<nav
 				class="w-full flex gap-5 mb-14 justify-between items-center font-semibold text-xl text-donate-primary py-4"
@@ -40,12 +42,14 @@
 
 			<!-- Donation & History Tabs -->
 			<div class="space-x-5">
-				<button id="donation-btn"
+				<button
+					id="donation-btn"
 					class="active-tab-btn px-6 py-2 rounded-lg transition-all duration-500"
 				>
 					Donation
 				</button>
-				<button id="history-btn"
+				<button
+					id="history-btn"
 					class="inactive-tab-btn px-6 py-2 rounded-lg transition-all duration-500"
 				>
 					History
@@ -54,9 +58,61 @@
 		</header>
 
 		<!-- Main Contents -->
-		<main class="">
+		<main class="mx-16 md:mx-36">
 			<!-- Donate Tab -->
-			<section id="donate-tab" class="block">Donate</section>
+			<section id="donate-tab" class="block">
+				<!-- Donate Noakhali Flood -->
+				<div class="flex gap-8">
+          <!-- Image -->
+					<figure class="flex-1">
+						<img
+							src="./src/assets/noakhali.png"
+							alt="Noakhali Flood"
+						/>
+					</figure>
+          <!-- Description -->
+					<div class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4">
+						<div
+							class="flex items-center gap-2 text-donate-secondary"
+						>
+							<img
+								src="./src/assets/coin.png"
+								alt="Currency Coin"
+							/>
+							<span id="noakhali-amount">0</span>
+							<span>BDT</span>
+						</div>
+						<h3 class="font-bold text-xl text-donate-secondary">
+							Donate for Flood at Noakhali, Bangladesh
+						</h3>
+						<p class="indent-4">
+							The recent floods in Noakhali have caused
+							significant damage to homes infrastructure. Your
+							donation will help provide essential supplies and to
+							those affected by this disaster. Every contribution,
+							big or small, makes difference. Please join us in
+							supporting the relief efforts and making a positive
+							impact on the lives of those in need.
+						</p>
+						<form class="flex flex-col gap-4">
+							<input
+								class="border border-[#1111111A] h-12 focus:outline-none px-3 rounded-lg"
+								placeholder="Write Donation Amount"
+								required
+								type="number"
+								name="noakhali-input"
+								id="noakhali-input"
+							/>
+							<button
+								type="submit"
+								class="bg-donate border border-donate px-8 py-3 rounded-lg hover:bg-donate-alter transition-all duration-500"
+							>
+								Donate Now
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
 
 			<!-- History Tab -->
 			<section id="history-tab" class="hidden">History</section>
