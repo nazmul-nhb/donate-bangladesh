@@ -10,8 +10,10 @@ const donateTab = getElementByID("donate-tab");
 const historyTab = getElementByID("history-tab");
 
 const noakhaliButton = getElementByID("noakhali-button");
+const feniButton = getElementByID("feni-button");
+const quotaButton = getElementByID("quota-button");
 
-export let currentBalance:number = 100000;
+export let currentBalance: number = 100000;
 
 if (balanceContainer) {
 	balanceContainer.innerText = currentBalance.toString();
@@ -36,9 +38,24 @@ const handleHistoryClick = (e: MouseEvent) => {
 donateButton?.addEventListener("click", handleDonationClick);
 historyButton?.addEventListener("click", handleHistoryClick);
 
-const handleDonation = (e: MouseEvent) => {
+// Handle Donations
+const handleNoakhaliDonation = (e: MouseEvent) => {
 	e.preventDefault();
-	calculateDonation("noakhali-amount", "noakhali-input")
+	calculateDonation("noakhali-amount", "noakhali-input");
 };
 
-noakhaliButton?.addEventListener("click", handleDonation);
+noakhaliButton?.addEventListener("click", handleNoakhaliDonation);
+
+const handleFeniDonation = (e: MouseEvent) => {
+	e.preventDefault();
+	calculateDonation("feni-amount", "feni-input");
+};
+
+feniButton?.addEventListener("click", handleFeniDonation);
+
+const handleQuotaDonation = (e: MouseEvent) => {
+	e.preventDefault();
+	calculateDonation("quota-amount", "quota-input");
+};
+
+quotaButton?.addEventListener("click", handleQuotaDonation);
