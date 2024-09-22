@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active-tab-btn {
+	background-color: #b4f461;
+	box-shadow: 0 3px 5px #4c830459, 0 -3px 5px #4c830443;
+}
+
+.active-tab-btn:hover {
+	background-color: #7ec126;
+}
+
+.inactive-tab-btn {
+	background-color: transparent;
+	box-shadow: 0 3px 5px #00000033, 0 -3px 5px #0000001a;
+}
+
+.inactive-tab-btn:hover {
+	background-color: #bebec489;
+}

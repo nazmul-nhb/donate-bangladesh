@@ -7,11 +7,11 @@
 		<title>Donate Bangladesh - DOM for Fun</title>
 	</head>
 	<body class="max-w-screen-2xl px-6 mx-auto bg-donate-bg">
-    <!-- Header Section -->
-		<header class="pb-8">
+		<!-- Header Section -->
+		<header class="pb-8 flex flex-col items-center justify-center">
 			<!-- Navbar -->
 			<nav
-				class="flex gap-5 justify-between items-center font-semibold text-xl text-donate-primary py-4"
+				class="w-full flex gap-5 mb-14 justify-between items-center font-semibold text-xl text-donate-primary py-4"
 			>
 				<!-- Blog Button -->
 				<button
@@ -37,9 +37,30 @@
 					<span>BDT</span>
 				</div>
 			</nav>
+
+			<!-- Donation & History Tabs -->
+			<div class="space-x-5">
+				<button id="donation-btn"
+					class="active-tab-btn px-6 py-2 rounded-lg transition-all duration-500"
+				>
+					Donation
+				</button>
+				<button id="history-btn"
+					class="inactive-tab-btn px-6 py-2 rounded-lg transition-all duration-500"
+				>
+					History
+				</button>
+			</div>
 		</header>
 
-		<main class=""></main>
+		<!-- Main Contents -->
+		<main class="">
+			<!-- Donate Tab -->
+			<section id="donate-tab" class="block">Donate</section>
+
+			<!-- History Tab -->
+			<section id="history-tab" class="hidden">History</section>
+		</main>
 		<footer class=""></footer>
 		<script type="module" src="/src/main.ts"></script>
 	</body>
