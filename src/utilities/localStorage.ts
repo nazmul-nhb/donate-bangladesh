@@ -17,7 +17,7 @@ export const saveDonationData = (donationInfo: IDonationInfo) => {
 
 	localStorage.setItem("donate-bangladesh", newDonationData);
 
-	toastr.info(`Donation Info Saved to History!`);
+	toastr.info(`Saved to History!`);
 };
 
 export const getCurrentBalance = () => {

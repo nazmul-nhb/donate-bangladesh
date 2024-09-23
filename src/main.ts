@@ -1,4 +1,6 @@
 import "./style.css";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 import { getElementByID } from "./utilities/getElements";
 import { getCurrentBalance } from "./utilities/localStorage";
 import { calculateDonation } from "./utilities/calculateDonation";
@@ -70,3 +72,15 @@ quotaButton?.addEventListener("click", handleQuotaDonation);
 displaySpecificDonationAmount("noakhali-amount");
 displaySpecificDonationAmount("feni-amount");
 displaySpecificDonationAmount("quota-amount");
+
+// toast options
+toastr.options = {
+	closeButton: true,
+	progressBar: true,
+	positionClass: "toast-bottom-right",
+	preventDuplicates: true,
+	showEasing: "swing",
+	hideEasing: "linear",
+	showMethod: "fadeIn",
+	hideMethod: "fadeOut",
+};

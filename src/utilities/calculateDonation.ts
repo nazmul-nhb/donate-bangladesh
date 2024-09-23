@@ -47,8 +47,6 @@ export const calculateDonation = (
 
 		saveDonationData(donationInfo);
 		saveCurrentBalance(currentBalance);
-		toastr.success(`Donated BDT ${amount}`, "", {
-			positionClass: "toast-bottom-right",
-		});
+		toastr.success(`Donated BDT ${amount}`);
 	}
 };
