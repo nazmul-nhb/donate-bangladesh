@@ -15,7 +15,7 @@ export const displayDonationHistory = () => {
 
 			historyCard.classList.add(
 				"border",
-				"border-[#1111111A]",
+				"border-donate-border",
 				"p-8",
 				"rounded-lg",
 				"space-y-4"

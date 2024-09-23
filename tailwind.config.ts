@@ -14,6 +14,7 @@ export default {
 				"donate-bg": "#F9F7F3",
 				"donate-primary": "#111111",
 				"donate-secondary": "#111111B3",
+				"donate-border": "#1111111A",
 			},
 		},
 	},

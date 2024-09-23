@@ -6,13 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Donate Bangladesh - DOM for Fun</title>
 	</head>
-	<body class="max-w-screen-2xl px-6 mx-auto bg-donate-bg">
+	<body class="max-w-screen-2xl px-6 pb-8 mx-auto bg-donate-bg">
 		<!-- Header Section -->
 		<header
-			class="pb-8 mx-4 md:mx-28 flex flex-col items-center justify-center sticky top-0 bg-donate-bg"
+			class="pb-8 px-4 md:px-28 flex flex-col items-center justify-center sticky top-0 bg-donate-bg"
 		>
 			<!-- Site Logo & Title -->
-			<div class="flex md:hidden justify-start items-center gap-2">
+			<div class="flex md:hidden justify-start items-center gap-2 pt-4">
 				<!-- Logo -->
 				<img
 					class="w-6 aspect-auto"
@@ -73,21 +73,23 @@
 			<!-- Donate Tab -->
 			<section id="donate-tab" class="block space-y-24">
 				<!-- Donate Noakhali Flood -->
-				<div class="flex md:flex-row flex-col gap-4 md:gap-8">
+				<div
+					class="flex md:flex-row flex-col gap-4 md:gap-8 border border-donate-border p-7 rounded-lg"
+				>
 					<!-- Image -->
 					<figure class="flex-1">
 						<img
-							class="p-3"
+							class="rounded-lg"
 							src="./src/assets/noakhali.png"
 							alt="Noakhali Flood"
 						/>
 					</figure>
 					<!-- Description -->
 					<div
-						class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4"
+						class="flex-1 text-donate-secondary flex flex-col justify-evenly items-start gap-4"
 					>
 						<div
-							class="flex items-center gap-2 text-donate-secondary"
+							class="flex items-center gap-2 text-donate-secondary bg-[#f3f3f3] px-4 py-3 font-semibold rounded-lg"
 						>
 							<img
 								src="./src/assets/coin.png"
@@ -102,7 +104,7 @@
 						>
 							Donate for Flood at Noakhali, Bangladesh
 						</h3>
-						<p class="indent-4">
+						<p class="indent-4 text-justify">
 							The recent floods in Noakhali have caused
 							significant damage to homes infrastructure. Your
 							donation will help provide essential supplies and to
@@ -113,8 +115,8 @@
 						</p>
 						<form class="flex flex-col gap-4">
 							<input
-								class="border border-[#1111111A] h-12 focus:outline-none px-3 rounded-lg"
-								placeholder="Write Donation Amount"
+								class="border border-donate-border h-12 focus:outline-none px-3 rounded-lg"
+								placeholder="Donation Amount"
 								required
 								type="number"
 								name="noakhali-input"
@@ -131,21 +133,23 @@
 					</div>
 				</div>
 				<!-- Donate Feni Flood -->
-				<div class="flex md:flex-row flex-col gap-4 md:gap-8">
+				<div
+					class="flex md:flex-row flex-col gap-4 md:gap-8 border border-donate-border p-7 rounded-lg"
+				>
 					<!-- Image -->
 					<figure class="flex-1">
 						<img
-							class="p-3"
+							class="rounded-lg"
 							src="./src/assets/feni.png"
 							alt="Feni Flood"
 						/>
 					</figure>
 					<!-- Description -->
 					<div
-						class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4"
+						class="flex-1 text-donate-secondary flex flex-col justify-evenly items-start gap-4"
 					>
 						<div
-							class="flex items-center gap-2 text-donate-secondary"
+							class="flex items-cente gap-2 text-donate-secondary bg-[#f3f3f3] px-4 py-3 font-semibold rounded-lg"
 						>
 							<img
 								src="./src/assets/coin.png"
@@ -160,7 +164,7 @@
 						>
 							Donate for Flood Relief in Feni, Bangladesh
 						</h3>
-						<p class="indent-4">
+						<p class="indent-4 text-justify">
 							The recent floods in Feni have devastated local
 							communities, leading to severe disruption and loss.
 							Your generous donation will help provide immediate
@@ -174,8 +178,8 @@
 						</p>
 						<form class="flex flex-col gap-4">
 							<input
-								class="border border-[#1111111A] h-12 focus:outline-none px-3 rounded-lg"
-								placeholder="Write Donation Amount"
+								class="border border-donate-border h-12 focus:outline-none px-3 rounded-lg"
+								placeholder="Donation Amount"
 								required
 								type="number"
 								name="feni-input"
@@ -192,9 +196,11 @@
 					</div>
 				</div>
 				<!-- Donate Quota Movement Injured -->
-				<div class="flex md:flex-row flex-col gap-4 md:gap-8">
+				<div
+					class="flex md:flex-row flex-col gap-4 md:gap-8 border border-donate-border p-7 rounded-lg"
+				>
 					<!-- Image -->
-					<figure class="flex-1">
+					<figure class="rounded-lg">
 						<img
 							class="p-3"
 							src="./src/assets/quota-protest.png"
@@ -203,10 +209,10 @@
 					</figure>
 					<!-- Description -->
 					<div
-						class="flex-1 text-donate-secondary flex flex-col justify-evenly gap-4"
+						class="flex-1 text-donate-secondary flex flex-col justify-evenly items-start gap-4"
 					>
 						<div
-							class="flex items-center gap-2 text-donate-secondary"
+							class="flex items-center gap-2 text-donate-secondary bg-[#f3f3f3] px-4 py-3 font-semibold rounded-lg"
 						>
 							<img
 								src="./src/assets/coin.png"
@@ -221,7 +227,7 @@
 						>
 							Aid for Injured in the Quota Movement
 						</h3>
-						<p class="indent-4">
+						<p class="indent-4 text-justify">
 							The recent Quota movement has resulted in numerous
 							injuries and significant hardship for many
 							individuals. Your support is crucial in providing
@@ -237,8 +243,8 @@
 						</p>
 						<form class="flex flex-col gap-4">
 							<input
-								class="border border-[#1111111A] h-12 focus:outline-none px-3 rounded-lg"
-								placeholder="Write Donation Amount"
+								class="border border-donate-border h-12 focus:outline-none px-3 rounded-lg"
+								placeholder="Donation Amount"
 								required
 								type="number"
 								name="quota-input"
@@ -258,15 +264,7 @@
 
 			<!-- History Tab -->
 			<section id="history-tab" class="hidden space-y-6">
-				<!-- <div id="history-card" class="border border-[#1111111A] p-8 rounded-lg space-y-4">
-					<h3 class="font-bold text-xl">
-						500 Taka is Donated for Foul Kaj!
-					</h3>
-					<h6 class="font-light text-donate-secondary">
-						Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-						Standard Time)
-					</h6>
-				</div> -->
+				<!-- Generate Donation History -->
 			</section>
 		</main>
 		<footer class=""></footer>
