@@ -4,6 +4,7 @@ import { getCurrentBalance } from "./utilities/localStorage";
 import { calculateDonation } from "./utilities/calculateDonation";
 import { toggleButtonState, toggleTabs } from "./utilities/togglers";
 import { displayDonationHistory } from "./utilities/displayHistory";
+import { displaySpecificDonationAmount } from "./utilities/displayDonation";
 
 export const balanceContainer = getElementByID("balance");
 
@@ -34,6 +35,8 @@ const handleHistoryClick = (e: MouseEvent) => {
 	e.preventDefault();
 	// Show history tab, hide donation tab
 	toggleTabs(historyTab, donateTab);
+	// Display Donation History
+	displayDonationHistory();
 	// Make history button active
 	toggleButtonState(historyButton, donateButton);
 };
@@ -63,4 +66,7 @@ const handleQuotaDonation = (e: MouseEvent) => {
 
 quotaButton?.addEventListener("click", handleQuotaDonation);
 
-displayDonationHistory();
+// Display all the donation amount for each campaign
+displaySpecificDonationAmount("noakhali-amount");
+displaySpecificDonationAmount("feni-amount");
+displaySpecificDonationAmount("quota-amount");

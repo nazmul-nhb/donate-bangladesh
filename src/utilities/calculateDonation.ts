@@ -33,9 +33,9 @@ export const calculateDonation = (
 	if (balanceContainer) {
 		balanceContainer.innerText = currentBalance.toString();
 		if (donationContainer) {
-			let noakhaliNumberAmount = Number(donationContainer.innerText);
-			noakhaliNumberAmount += amount;
-			donationContainer.innerText = noakhaliNumberAmount.toString();
+			let previousAmount = Number(donationContainer.innerText);
+			previousAmount += amount;
+			donationContainer.innerText = previousAmount.toString();
 		}
 		(getElementByID(inputID) as HTMLInputElement).value = "";
 
