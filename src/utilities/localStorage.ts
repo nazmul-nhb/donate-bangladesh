@@ -11,7 +11,7 @@ export const getDonationData = (): IDonationInfo[] => {
 export const saveDonationData = (donationInfo: IDonationInfo) => {
 	const donationData = getDonationData();
 
-	donationData.push(donationInfo);
+	donationData.unshift(donationInfo);
 
 	const newDonationData = JSON.stringify(donationData);
 
