@@ -9,7 +9,7 @@ export const displaySpecificDonationAmount = (containerID: string) => {
 	);
 
 	const totalAmount = filteredDonation?.reduce(
-		(total, current) => total + current.amount,
+		(total, donation) => total + donation.amount,
 		0
 	);
 

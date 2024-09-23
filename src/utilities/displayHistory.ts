@@ -2,6 +2,7 @@ import { getElementByID } from "./getElements";
 import { getDonationData } from "./localStorage";
 
 const historyTab = getElementByID("history-tab");
+
 export const displayDonationHistory = () => {
 	const donationData = getDonationData();
 
@@ -27,10 +28,10 @@ export const displayDonationHistory = () => {
 
 			historyCard.innerHTML = `
                 <h3 class="font-bold text-xl">
-                ${amount} Taka is Donated for ${title}!
+                    ${amount} Taka is Donated for ${title}!
                 </h3>
                 <h6 class="font-light text-donate-secondary">
-                Date: ${formattedDate}
+                    Date: ${formattedDate}
                 </h6>
             `;
 
