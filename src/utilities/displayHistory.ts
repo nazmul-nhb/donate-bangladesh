@@ -29,7 +29,7 @@ export const displayDonationHistory = () => {
 			const formattedDate = donationDate.toString();
 
 			historyCard.innerHTML = `
-                <h3 class="font-bold text-xl">
+                <h3 class="font-bold text-lg md:text-xl">
                     ${amount} Taka is Donated for ${formattedTitle}!
                 </h3>
                 <h6 class="font-light text-donate-secondary">

@@ -4,7 +4,7 @@ import { getCurrentBalance } from "./utilities/localStorage";
 import { calculateDonation } from "./utilities/calculateDonation";
 import { toggleButtonState, toggleTabs } from "./utilities/togglers";
 import { displayDonationHistory } from "./utilities/displayHistory";
-import { displaySpecificDonationAmount } from "./utilities/displayDonation";
+import { displaySpecificDonationAmount } from "./utilities/displayDonationAmount";
 
 export const balanceContainer = getElementByID("balance");
 
