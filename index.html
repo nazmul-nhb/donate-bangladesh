@@ -12,7 +12,9 @@
 			class="pb-8 px-4 md:px-28 flex flex-col items-center justify-center sticky top-0 bg-donate-bg"
 		>
 			<!-- Site Logo & Title -->
-			<div class="flex md:hidden justify-start items-center gap-2 pt-4">
+			<div
+				class="flex md:hidden justify-start items-center gap-2 pt-4 animate-pulse"
+			>
 				<!-- Logo -->
 				<img
 					class="w-6 aspect-auto"
@@ -20,7 +22,9 @@
 					alt="Donate Bangladesh Logo"
 				/>
 				<!-- Site Title -->
-				<span class="text-2xl font-bold">Donate Bangladesh</span>
+				<span class="text-2xl font-bold text-black"
+					>Donate Bangladesh</span
+				>
 			</div>
 			<!-- Navbar -->
 			<nav
@@ -33,7 +37,7 @@
 					Blog
 				</button>
 				<!-- Site Logo & Title -->
-				<div class="hidden md:flex items-center gap-2">
+				<div class="hidden md:flex items-center gap-2 animate-pulse">
 					<!-- Logo -->
 					<img
 						class="w-6 aspect-auto"
@@ -41,7 +45,9 @@
 						alt="Donate Bangladesh Logo"
 					/>
 					<!-- Site Title -->
-					<span class="">Donate Bangladesh</span>
+					<span class="text-black text-2xl font-bold"
+						>Donate Bangladesh</span
+					>
 				</div>
 				<!-- Initial Balance -->
 				<div class="flex items-center gap-2 text-donate-secondary">
@@ -98,11 +104,11 @@
 							<span id="noakhali-amount">0</span>
 							<span>BDT</span>
 						</div>
-						<h3
-							id="noakhali-title"
-							class="font-bold text-xl text-donate-secondary"
-						>
-							Donate for Flood at Noakhali, Bangladesh
+						<h3 class="font-bold text-xl text-donate-secondary">
+							Donate for
+							<span id="noakhali-title">
+								Flood at Noakhali, Bangladesh
+							</span>
 						</h3>
 						<p class="indent-4 text-justify">
 							The recent floods in Noakhali have caused
@@ -158,11 +164,11 @@
 							<span id="feni-amount">0</span>
 							<span>BDT</span>
 						</div>
-						<h3
-							id="feni-title"
-							class="font-bold text-xl text-donate-secondary"
-						>
-							Donate for Flood Relief in Feni, Bangladesh
+						<h3 class="font-bold text-xl text-donate-secondary">
+							Donate for
+							<span id="feni-title">
+								Flood Relief in Feni, Bangladesh
+							</span>
 						</h3>
 						<p class="indent-4 text-justify">
 							The recent floods in Feni have devastated local
@@ -221,11 +227,11 @@
 							<span id="quota-amount">0</span>
 							<span>BDT</span>
 						</div>
-						<h3
-							id="quota-title"
-							class="font-bold text-xl text-donate-secondary"
-						>
-							Aid for Injured in the Quota Movement
+						<h3 class="font-bold text-xl text-donate-secondary">
+							Aid for
+							<span id="quota-title">
+								the Injured in Quota Reform Movement, Bangladesh
+							</span>
 						</h3>
 						<p class="indent-4 text-justify">
 							The recent Quota movement has resulted in numerous
@@ -267,7 +273,7 @@
 				<!-- Generate Donation History -->
 			</section>
 		</main>
-		<footer class=""></footer>
+		<footer></footer>
 		<script type="module" src="/src/main.ts"></script>
 	</body>
 </html>

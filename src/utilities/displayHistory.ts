@@ -22,13 +22,15 @@ export const displayDonationHistory = () => {
 				"space-y-4"
 			);
 
+			const formattedTitle = getElementByID(title)?.innerText.trim();
+
 			const donationDate = new Date(time);
 
 			const formattedDate = donationDate.toString();
 
 			historyCard.innerHTML = `
                 <h3 class="font-bold text-xl">
-                    ${amount} Taka is Donated for ${title}!
+                    ${amount} Taka is Donated for ${formattedTitle}!
                 </h3>
                 <h6 class="font-light text-donate-secondary">
                     Date: ${formattedDate}

@@ -11,7 +11,6 @@ export const calculateDonation = (
 	titleID: string
 ) => {
 	const donationContainer = getElementByID(containerID);
-	const title = getElementByID(titleID)?.innerText;
 	const amount = Number((getElementByID(inputID) as HTMLInputElement).value);
 
 	let currentBalance = Number(balanceContainer?.innerText);
@@ -40,9 +39,9 @@ export const calculateDonation = (
 		(getElementByID(inputID) as HTMLInputElement).value = "";
 
 		const donationInfo: IDonationInfo = {
-			type: containerID,
 			amount,
-			title: title as string,
+			type: containerID,
+			title: titleID,
 			time: new Date(),
 		};
 
