@@ -3,7 +3,7 @@ import "toastr/build/toastr.min.css";
 import { balanceContainer } from "../main";
 import { getElementByID } from "./getElements";
 import { IDonationInfo } from "../types/interfaces";
-import { saveDonationData } from "./localStorage";
+import { saveCurrentBalance, saveDonationData } from "./localStorage";
 
 export const calculateDonation = (
 	containerID: string,
@@ -47,7 +47,7 @@ export const calculateDonation = (
 		};
 
 		saveDonationData(donationInfo);
-
+		saveCurrentBalance(currentBalance);
 		toastr.success(`Donated BDT ${amount}`);
 	}
 };

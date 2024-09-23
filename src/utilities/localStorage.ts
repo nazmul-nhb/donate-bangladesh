@@ -19,3 +19,18 @@ export const saveDonationData = (donationInfo: IDonationInfo) => {
 
 	toastr.info(`Donation Info Saved to History!`);
 };
+
+export const getCurrentBalance = () => {
+	const currentBalance = localStorage.getItem("balance");
+	if (currentBalance) {
+		return Number(JSON.parse(currentBalance));
+	} else {
+		return null;
+	}
+};
+
+export const saveCurrentBalance = (currentBalance: number) => {
+	const newCurrentBalance = JSON.stringify(currentBalance);
+	localStorage.setItem("balance", newCurrentBalance);
+	toastr.info(`Current Balance is ${currentBalance}!`);
+};

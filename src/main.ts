@@ -1,6 +1,7 @@
 import "./style.css";
-import { calculateDonation } from "./utilities/calculateDonation";
 import { getElementByID } from "./utilities/getElements";
+import { getCurrentBalance } from "./utilities/localStorage";
+import { calculateDonation } from "./utilities/calculateDonation";
 import { toggleButtonState, toggleTabs } from "./utilities/togglers";
 
 export const balanceContainer = getElementByID("balance");
@@ -13,7 +14,7 @@ const noakhaliButton = getElementByID("noakhali-button");
 const feniButton = getElementByID("feni-button");
 const quotaButton = getElementByID("quota-button");
 
-export let currentBalance: number = 100000;
+export let currentBalance: number = getCurrentBalance() || 100000;
 
 if (balanceContainer) {
 	balanceContainer.innerText = currentBalance.toString();
