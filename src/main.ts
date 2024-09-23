@@ -1,10 +1,11 @@
 import "./style.css";
 import { getElementByID } from "./utilities/getElements";
-import { getCurrentBalance } from "./utilities/localStorage";
+import { getCurrentBalance, getDonationData } from "./utilities/localStorage";
 import { calculateDonation } from "./utilities/calculateDonation";
 import { toggleButtonState, toggleTabs } from "./utilities/togglers";
 
 export const balanceContainer = getElementByID("balance");
+
 const donateButton = getElementByID("donation-btn");
 const historyButton = getElementByID("history-btn");
 const donateTab = getElementByID("donate-tab");
@@ -60,3 +61,42 @@ const handleQuotaDonation = (e: MouseEvent) => {
 };
 
 quotaButton?.addEventListener("click", handleQuotaDonation);
+
+const displayDonationHistory = () => {
+	const donationData = getDonationData();
+
+	if (historyTab) {
+		historyTab.innerHTML = "";
+
+		donationData?.forEach((donationInfo) => {
+			const { amount, title, time } = donationInfo;
+
+			const historyCard = document.createElement("div");
+
+			historyCard.classList.add(
+				"border",
+				"border-[#1111111A]",
+				"p-8",
+				"rounded-lg",
+				"space-y-4"
+			);
+
+			const donationDate = new Date(time);
+
+			const formattedDate = donationDate.toString();
+
+			historyCard.innerHTML = `
+        <h3 class="font-bold text-xl">
+          ${amount} Taka is Donated for ${title}!
+        </h3>
+        <h6 class="font-light text-donate-secondary">
+          Date: ${formattedDate}
+        </h6>
+      `;
+
+			historyTab.appendChild(historyCard);
+		});
+	}
+};
+
+displayDonationHistory();
