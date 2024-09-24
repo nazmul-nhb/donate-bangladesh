@@ -16,8 +16,8 @@ export const handleModal = () => {
 		}
 
 		// When click anywhere outside of the modal, close it
-		window.onclick = (event) => {
-			if (event.target == modal) {
+		window.onclick = (e: MouseEvent) => {
+			if (e.target == modal) {
 				modal.style.display = "none";
 			}
 		};
