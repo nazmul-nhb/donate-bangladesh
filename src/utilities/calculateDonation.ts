@@ -57,10 +57,10 @@ export const calculateDonation = (
 		saveDonationData(donationInfo);
 		saveCurrentBalance(currentBalance);
 
-		// Show success message
+		// Show success message as Toast
 		toastr.success(`Donated BDT ${amount}`);
 
-		// Show success message
+		// Show success message in a Modal
 		handleModal();
 	}
 };
