@@ -59,7 +59,7 @@ input[type="number"] {
 	top: 0;
 	box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
 	animation-name: animateModal;
-	animation-duration: 0.7s;
+	animation-duration: 0.5s;
 }
 
 /* Animation for Modal */
