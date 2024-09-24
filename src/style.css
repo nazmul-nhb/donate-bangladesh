@@ -22,16 +22,51 @@
 }
 
 /* Hide increase and decrease arrows in number input fields */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    margin: 0;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	margin: 0;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
 }
 
-input[type=number] {
-    appearance: textfield;
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
+input[type="number"] {
+	appearance: textfield;
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+}
+
+/* Modal Styles */
+/* Modal Background */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Contents */
+.modal-content {
+	position: relative;
+	top: 0;
+	box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+	animation-name: animateModal;
+	animation-duration: 0.7s;
+}
+
+/* Animation for Modal */
+@keyframes animateModal {
+	from {
+		scale: 0%;
+		opacity: 0;
+	}
+	to {
+		scale: 100%;
+		opacity: 1;
+	}
 }
